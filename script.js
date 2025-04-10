@@ -16,9 +16,11 @@ const downloadBtn = document.getElementById("downloadBtn");
 
 function updateUI() {
   const dayStr = String(currentDay).padStart(3, "0");
-  const imageUrl = `https://perfectos.pro/f/wallpaper_25-01/images/perfectos_wallpaper_25-01_${dayStr}.jpg`;
-  imageEl.src = imageUrl;
-  downloadBtn.href = imageUrl;
+  const displayUrl = `https://perfectos.pro/f/wallpaper_25-01/images/perfectos_wallpaper_25-01_${dayStr}.webp`;
+  const downloadUrl = `https://perfectos.pro/f/wallpaper_25-01/images/perfectos_wallpaper_25-01_${dayStr}.png`;
+
+  imageEl.src = displayUrl;
+  downloadBtn.href = downloadUrl;
   titleEl.textContent = `Perfectos Wallpapers '25 Vol. 1 – Day ${currentDay} of 23`;
 
   prevBtn.style.visibility = currentDay > 1 ? "visible" : "hidden";
